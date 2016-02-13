@@ -1,0 +1,15 @@
+<%= link_to "New Blog Post", new_blog_path %><br/>
+
+<% if @blogs.empty? %>
+"No records"
+<% else %>
+Title:
+<% @blogs.each do |blog| %>
+<%= link_to blog.title, blog_path(blog.id) %>
+<%= link_to "edit", edit_blog_path(blog.id) %>
+<%= button_to "delete", blog_path(blog.id), :method=>:delete, :class=>:destroy %>
+<br/>
+<% end %>
+<% end %>
+
+git 

@@ -1,0 +1,5 @@
+<%= form_for @blog do |f| %>
+Title: <%= f.text_field :title %><br/>
+Descritpion: <%= f.text_area :description %>
+<%= f.submit "update" %>
+<% end %>
